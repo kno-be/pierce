@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Nav from '../components/navbar/navbar';
-import Productcard from '../components/product-card/product-card'
+import Nav from '../../components/navbar/navbar';
+import Productcard from '../../components/product-card/product-card'
 
 export default function Products() {
   return (
