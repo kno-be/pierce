@@ -1,11 +1,14 @@
 import React from 'react';
-
+import { signIn, signOut, useSession } from 'next-auth/client'
 
 const Nav = () => {
+
+    const [ session, loading ] = useSession()
+
     const [open, setOpen] = React.useState(false);
     const [flyer, setFlyer] = React.useState(false);
     const [flyerTwo, setFlyerTwo] = React.useState(false);
-  
+    if(!session) {
     return (
       <>
         {/* This example requires Tailwind CSS v2.0+ */}
@@ -547,13 +550,13 @@ const Nav = () => {
                   href="#"
                   className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
                 >
-                  Sign in
+                <button onClick={() => signIn()}>Sign in</button>                
                 </a>
                 <a
                   href="#"
                   className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
-                  Sign up
+                <button onClick={() => signOut()}>Sign out</button>
                 </a>
               </div>
             </div>
@@ -806,8 +809,9 @@ const Nav = () => {
             </div>
           </div>
         </div>
-      </>
-    );
+      </> 
+    )} else return <a href="/api/auth/signin">Sign in</a>
+    ;
   };
 
   export default Nav;
