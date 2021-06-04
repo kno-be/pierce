@@ -16,7 +16,7 @@ const Nav = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
               <div className="flex justify-start lg:w-0 lg:flex-1">
-                <a href="#">
+                <a href="/">
                   <span className="sr-only">Workflow</span>
                   <img
                     className="h-8 w-auto sm:h-10"
@@ -316,16 +316,16 @@ const Nav = () => {
                 </div>
   
                 <a
-                  href="#"
+                  href="/teste"
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
-                  Pricing
+                  Test
                 </a>
                 <a
-                  href="#"
+                  href="/about"
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
                 >
-                  Docs
+                  About
                 </a>
                 <div className="relative">
                   {/* Item active: "text-gray-900", Item inactive: "text-gray-500" */}
@@ -550,7 +550,7 @@ const Nav = () => {
                   href="#"
                   className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
                 >
-                <button onClick={() => signIn('auth0')}>Sign in</button>                
+                <button onClick={() => signIn()}>Sign in</button>                
                 </a>
                 <a
                   href="#"
