@@ -334,7 +334,7 @@ const Nav = () => {
                     className="group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     onClick={() => (setFlyerTwo(!flyerTwo), setFlyer(false))}
                   >
-                    <span>More</span>
+                    <span>My account</span>
                     {/*
                 Heroicon name: solid/chevron-down
   
@@ -545,6 +545,7 @@ const Nav = () => {
                   </div>
                 </div>
               </nav>
+              
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a
                   href="#"
