@@ -135,7 +135,7 @@ export default function ProfilePage() {
                     <div class="mt-5 w-full">
                       <a
                         href="#"
-                        class="w-full border-t-2 border-gray-100 font-medium text-gray-600 py-4 px-4 w-full block hover:bg-gray-100 transition duration-150"
+                        class="w-full border-t-2 border-gray-100 font-medium text-gray-600 py-4 px-4 block hover:bg-gray-100 transition duration-150"
                       >
                         <img
                           src="https://pantazisoft.com/img/avatar-2.jpeg"
@@ -148,7 +148,7 @@ export default function ProfilePage() {
 
                       <a
                         href="#"
-                        class="w-full border-t-2 border-gray-100 font-medium text-gray-600 py-4 px-4 w-full block hover:bg-gray-100 transition duration-150"
+                        class="w-full border-t-2 border-gray-100 font-medium text-gray-600 py-4 px-4 block hover:bg-gray-100 transition duration-150"
                       >
                         <img
                           src="https://pantazisoft.com/img/avatar-2.jpeg"
@@ -161,7 +161,7 @@ export default function ProfilePage() {
 
                       <a
                         href="#"
-                        class="w-full border-t-2 border-gray-100 font-medium text-gray-600 py-4 px-4 w-full block hover:bg-gray-100 transition duration-150"
+                        class="w-full border-t-2 border-gray-100 font-medium text-gray-600 py-4 px-4 block hover:bg-gray-100 transition duration-150"
                       >
                         <img
                           src="https://pantazisoft.com/img/avatar-2.jpeg"
@@ -175,7 +175,7 @@ export default function ProfilePage() {
 
                       <a
                         href="#"
-                        class="w-full border-t-2 border-gray-100 font-medium text-gray-600 py-4 px-4 w-full block hover:bg-gray-100 transition duration-150"
+                        class="w-full border-t-2 border-gray-100 font-medium text-gray-600 py-4 px-4 block hover:bg-gray-100 transition duration-150"
                       >
                         <img
                           src="https://pantazisoft.com/img/avatar-2.jpeg"
@@ -188,7 +188,7 @@ export default function ProfilePage() {
 
                       <a
                         href="#"
-                        class="w-full border-t-2 border-gray-100 font-medium text-gray-600 py-4 px-4 w-full block hover:bg-gray-100 transition duration-150"
+                        class="w-full border-t-2 border-gray-100 font-medium text-gray-600 py-4 px-4 block hover:bg-gray-100 transition duration-150"
                       >
                         <img
                           src="https://pantazisoft.com/img/avatar-2.jpeg"
