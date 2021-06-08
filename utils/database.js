@@ -1,13 +1,18 @@
-import {MongoClient} from 'mongodb';
+const mongoose = require('mongoose');
+mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true});
 
-const client = new MongoClient(process.env.DATABASE_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  // we're connected!
 });
 
-export default async function connect() {
-    if (!client.isConnected()) await client.connect();
+const userSchema = new mongoose.Schema({
+    name: {type: String, required:true},
+    email: {type: String, required:true},
+})
 
-    const db = client.db('users').collection('pierce');
-    return { db, client };
-}
+const productSchema = new mongoose.Schema({
+    title: {type: String, required:true},
+    price: {type: Number, min:0, required:true},
+})
