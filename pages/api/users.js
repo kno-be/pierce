@@ -1,4 +1,3 @@
-import { NextApiRequest, NextApiResponse } from 'next';
 import connect, {} from "../../utils/database";
 
 export default async function (req, res) {
