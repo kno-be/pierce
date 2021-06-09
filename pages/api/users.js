@@ -2,13 +2,17 @@ import connect, {} from "../../utils/database";
 
 export default async function (req, res) {
     if (req.method === 'POST') {
+      const {
+        name,
+      } = req.body;
       // Process a POST request
       const {db} = await connect();
       res.statusCode = 200;      
-      const response = await db.insertOne({
-          "name": "333",
-        })
-       res.end();  
+      const response = await db.collection(users).insertOne({
+         name
+         })
+      res.json({ name: 'success'})
+      res.end();  
     }    else {
       // Handle any other HTTP method
       res.statusCode = 200;

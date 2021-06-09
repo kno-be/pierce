@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Nav from '../components/navbar/navbar';
+
 import Footer from '../components/footer/footer';
 
 export default function ProfilePage() {

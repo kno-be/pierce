@@ -1,19 +1,18 @@
-import connect, {} from "../../utils/database";
-import createProduct from "../../utils/product-api";
-
+import connectProducts, {} from "../../utils/database";
 
 export default async function (req, res) {
-    
     if (req.method === 'POST') {
-     
-      const {name,price} = req.body;
-
-      const {db} = await connect();
+      const {
+        name,
+      } = req.body;
+      // Process a POST request
+      const {db} = await connectProducts();
       res.statusCode = 200;      
       const response = await db.insertOne({
-          product
-        })
-       res.end();  
+         name
+         })
+      res.json({ name: 'success'})
+      res.end();  
     }    else {
       // Handle any other HTTP method
       res.statusCode = 200;

@@ -10,6 +10,7 @@
   "dependencies": {
     "eslint": "^7.27.0",
     "mongodb": "^3.6.9",
+    "mongoose": "^5.12.13",
     "next": "10.x",
     "next-auth": "^3.25.0",
     "prettier": "^2.3.0",
