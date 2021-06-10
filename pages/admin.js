@@ -39,13 +39,13 @@ export default function AdminPage() {
                                         <h1 className="pb-4">Criar produto:</h1>
                                             <div className="border-2 border-gray-300 px-4 py-4 mb-4">
                                                 <div className="flex flex-col text-lg text-left mb-8">
-                                                    <label>title:</label>
+                                                    <label>Title:</label>
                                                     <input className="bg-white w-auto m-1"></input>
-                                                    <label>price:</label>
+                                                    <label>Price:</label>
                                                     <input className="bg-white w-auto m-1"></input>
-                                                    <label>color:</label>
+                                                    <label>Color:</label>
                                                     <input className="bg-white w-auto m-1"></input>
-                                                    <label>tags:</label>
+                                                    <label>Tags:</label>
                                                     <input className="bg-white w-auto m-1"></input>
                                                 </div>
                                                 <div className="flex flex-row  bg-gray-300 space-x-3" >
