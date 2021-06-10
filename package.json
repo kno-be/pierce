@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "eslint": "^7.27.0",
     "mongodb": "^3.6.9",
     "mongoose": "^5.12.13",

@@ -1,15 +1,21 @@
-import connectProducts, {} from "../../utils/database";
+import connect, {} from "../../utils/mongodb";
 
 export default async function (req, res) {
     if (req.method === 'POST') {
       const {
-        name,
+        title=true,
+        price=true,
+        color=true,
+        tags=true  
       } = req.body;
       // Process a POST request
-      const {db} = await connectProducts();
+      const {db} = await connect();
       res.statusCode = 200;      
       const response = await db.insertOne({
-         name
+         title,
+         price,
+         color,
+         tags
          })
       res.json({ name: 'success'})
       res.end();  
