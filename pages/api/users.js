@@ -8,7 +8,7 @@ export default async function (req, res) {
       // Process a POST request
       const {db} = await connect();
       res.statusCode = 200;      
-      const response = await db.collection(users).insertOne({
+      const response = await db.insertOne({
          name
          })
       res.json({ name: 'success'})
