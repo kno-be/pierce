@@ -1,8 +1,22 @@
 import Head from 'next/head';
 import Footer from '../components/footer/footer';
-import { createProduct } from '../utils/api/product';
 
 export default function AdminPage() {
+
+  var prodTitle = document.getElementById("prodTitle")
+  var prodPrice = document.getElementById("prodPrice")
+  var prodImgPath = document.getElementById("prodImgPath")
+  var prodImgPath = document.getElementById("prodColor")
+  var prodColor = document.getElementById("prodTags")
+
+  var product = {
+      title:prodTitle.value,
+      price:prodPrice.value,
+      img:prodImgPath.value,
+      color:prodColor.value,
+      tags:prodTags.value
+  }
+
   return (
     <div>
       <Head>
@@ -17,10 +31,10 @@ export default function AdminPage() {
               <h1 className="text-xl">Admin</h1>
             </div>
             <div className=" text-white items-center mx-auto">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+              <span>Logs</span>
+              <span className="px-4">Docs</span>
+              <span>About</span>
+              <span className="px-4">AWS</span>
             </div>
             <hr className=""></hr>
             <div className="text-white items-end">
@@ -38,39 +52,48 @@ export default function AdminPage() {
             <div className="flex flex-col border-2 border-white  py-11 px-11 ">
               <div className="flex flex-col border-2 border-white bg-gray-300 my-8">
                 <div className="text-xl text-center py-4 px-4">
-                  <h1 className="pb-4">Create product:</h1>
+                  <h1 className="font-sans antialiased text-opacity-60 text-2xl pb-4">Create product:</h1>
                   <div className="border-2 border-gray-300 px-4 py-4 mb-4">
                     <div className="flex flex-col text-lg text-left mb-8">
-                      <label>Title:</label>
+                      <label for="prodTitle"className="font-sans antialiased">Title:</label>
                       <input
-                        id="title"
+                        id="prodTitle"
+                        name="prodTitle"
                         type="text"
                         className="bg-white w-auto m-1"
                       ></input>
-                      <label>Price:</label>
+                      <label className="font-sans antialiased">Price:</label>
                       <input
-                        id="price"
+                        id="prodPrice"
+                        name="prodPrice"
                         type="text"
                         className="bg-white w-auto m-1"
+                        
                       ></input>
-                      <label>Color:</label>
+                      <label className="font-sans antialiased">Image path:</label>
                       <input
-                        id="color"
+                        id="prodImgPath"
+                        name="prodImgPath"
                         type="text"
                         className="bg-white w-auto m-1"
+                        
                       ></input>
-                      <label>Tags:</label>
+                      <label className="font-sans antialiased">Color:</label>
                       <input
-                        id="tags"
+                        id="prodColor"
+                        name="prodColor"
                         type="text"
                         className="bg-white w-auto m-1"
+                        
                       ></input>
+                      <label className="font-sans antialiased text-md">Tags:</label>
+                      <textarea id="prodTags" name="prodTags" cols="40" rows="5"></textarea>
                     </div>
                     <div className="flex flex-row  bg-gray-300">
                       <button
                         type="button"
-                        onClick={() => createProduct()}
-                        className="text-md w-full bg-green-500 py-4"
+                        onClick={() => console.log(product)}
+                        className="font-sans antialiased text-md w-full bg-green-500 py-4"
                       >
                         Add
                       </button>
@@ -82,25 +105,25 @@ export default function AdminPage() {
             </div>
           </div>
 
-          <div className="flex flex-col h-96   bg-gray-300 ">
+          <div className="flex flex-col h-96   bg-white ">
                     
                     <div className="">
-                        <h1 className="text-xl py-4 px-24">Inventory</h1>
+                        <h1 className="font-sans antialiased text-opacity-60 text-2xl py-4 px-24">Inventory</h1>
                         <ul className="px-4 mb-4">
-                            <li>Product:</li>
-                            <li>Product:</li>
-                            <li>Product:</li>
-                            <li>Product:</li>
-                            <li>Product:</li>
-                            <li>Product:</li>
+                            <li className="font-sans antialiased text-xl"><a href="#">Product:</a></li>
+                            <li className="font-sans antialiased text-xl"><a href="#">Product:</a></li>
+                            <li className="font-sans antialiased text-xl"><a href="#">Product:</a></li>
+                            <li className="font-sans antialiased text-xl"><a href="#">Product:</a></li>
+                            <li className="font-sans antialiased text-xl"><a href="#">Product:</a></li>
+                            <li className="font-sans antialiased text-xl"><a href="#">Product:</a></li>
 
                         </ul>
                         <div className="flex flex-row px-4">
                                 <button type="button"
-                                    onClick={() => createProduct()} className="text-md w-full bg-red-500 py-4">
+                                    onClick={() => console.log(prodTitle.value)} className="text-md w-full bg-red-500 py-4">
                                     Delete</button>
                                 <button type="button"
-                                onClick={() => createProduct()} className="text-md w-full bg-yellow-500 py-4">
+                                onClick={() => console.log(prodTitle.value)} className="text-md w-full bg-yellow-500 py-4">
                                 Edit</button>
                         </div>
                     </div>
