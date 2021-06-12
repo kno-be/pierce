@@ -1,9 +1,12 @@
 import Head from 'next/head';
 import Footer from '../components/footer/footer';
+import {createProduct} from '../utils/api-front/product';
 
 export default function AdminPage() {
 
-  var prodTitle = document.getElementById("prodTitle")
+  
+
+/*  var prodTitle = document.getElementById("prodTitle")
   var prodPrice = document.getElementById("prodPrice")
   var prodImgPath = document.getElementById("prodImgPath")
   var prodImgPath = document.getElementById("prodColor")
@@ -16,6 +19,7 @@ export default function AdminPage() {
       color:prodColor.value,
       tags:prodTags.value
   }
+*/
 
   return (
     <div>
