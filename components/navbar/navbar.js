@@ -410,7 +410,7 @@ const Nav = () => {
                         </a>
                         <a
                           href="#"
-                          className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                          clssName="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                         >
                           {/* Heroicon name: outline/bookmark-alt */}
                           <svg
@@ -557,7 +557,7 @@ const Nav = () => {
                   href="#"
                   className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
-                <button onClick={() => signOut()}>Sign out</button>
+                <button onClick={() => signOut()}>Sign up</button>
                 </a>
               </div>
             </div>
