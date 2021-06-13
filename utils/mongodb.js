@@ -1,15 +1,48 @@
-import { MongoClient, Collection } from 'mongodb';
+import { MongoClient } from 'mongodb'
 
+const { DATABASE_URL, DATABASE_DB } = process.env
 
-const client = new MongoClient(process.env.DATABASE_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-export default async function connect() {
-  if (!client.isConnected()) await client.connect();
-
-  const db = client.db('Pierce').collection('Products');
-  return { db, client };
+if (!DATABASE_URL) {
+  throw new Error(
+    'Please define the MONGODB_URI environment variable inside .env.local'
+  )
 }
 
+if (!DATABASE_DB) {
+  throw new Error(
+    'Please define the MONGODB_DB environment variable inside .env.local'
+  )
+}
+
+/**
+ * Global is used here to maintain a cached connection across hot reloads
+ * in development. This prevents connections growing exponentially
+ * during API Route usage.
+ */
+let cached = global.mongo
+
+if (!cached) {
+  cached = global.mongo = { conn: null, promise: null }
+}
+
+export default async function connectToDatabase() {
+  if (cached.conn) {
+    return cached.conn
+  }
+
+  if (!cached.promise) {
+    const opts = {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+
+    cached.promise = MongoClient.connect(DATABASE_URL, opts).then((client) => {
+      return {
+        client,
+        db: client.db(DATABASE_DB),
+      }
+    })
+  }
+  cached.conn = await cached.promise
+  return cached.conn
+}
