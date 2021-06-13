@@ -66,7 +66,7 @@ export default function AdminPage() {
           </div>
         </div>
 
-        <div className="container:xl flex flex-col justify-center items-center md:flex-row md:space-x-4">
+        <div className="container:xl flex flex-col justify-center items-center md:flex-row ">
           <div className="flex flex-col  bg-white ">
             <div className="flex flex-col border-2 border-white  py-11 px-11 ">
               <div className="flex flex-col border-2 border-white bg-gray-300 my-8">
