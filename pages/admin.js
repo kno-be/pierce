@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Footer from '../components/footer/footer';
-import {createProduct} from '../utils/api-front/product';
+
 
 export default function AdminPage() {
 
-  
+
 
 /*  var prodTitle = document.getElementById("prodTitle")
   var prodPrice = document.getElementById("prodPrice")
