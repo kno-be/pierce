@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import React from 'react';
 import { useForm } from "react-hook-form";
 import Footer from '../components/footer/footer';
