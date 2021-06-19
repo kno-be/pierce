@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { signIn, signOut, useSession } from 'next-auth/client';
 
 const Nav = () => {
@@ -13,14 +14,20 @@ const Nav = () => {
     return (
       <div>
         {/* This example requires Tailwind CSS v2.0+ */}
-        <div class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
+        <div class="container flex flex-col flex-wrap items-center justify-between py-1 mx-auto md:flex-row max-w-7xl">
           <div class="relative flex flex-col md:flex-row">
             <a
               href="#_"
-              class="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0"
+              class="flex items-center font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0"
             >
               <span class="mx-auto text-xl font-black leading-none text-gray-900 select-none">
-                Pierce<span class="text-indigo-600">.</span>
+              <Image
+                src="/pierce-black-name.svg"
+                alt="Picture of the author"
+                layout="intrinsic"
+                width={100}
+                height={80}
+              />
               </span>
             </a>
             <nav class="flex flex-wrap items-center mb-5 text-base md:mb-0 md:pl-8 md:ml-8 md:border-l md:border-gray-200">

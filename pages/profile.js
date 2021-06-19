@@ -23,7 +23,7 @@ export default function ProfilePage() {
         <body class="bg-white font-sans antialiased">
           <div class="container mx-auto my-24">
             <div>
-              <div class="bg-white relative shadow-xl w-5/6 md:w-4/6  lg:w-3/6 xl:w-2/6 mx-auto">
+              <div class="bg-gray-300 relative  rounded-md shadow-xl w-5/6 md:w-4/6  lg:w-3/6 xl:w-2/6 mx-auto">
                 <div class="flex justify-center">
                   <img
                     src="https://pantazisoft.com/img/avatar-2.jpeg"
@@ -47,7 +47,7 @@ export default function ProfilePage() {
                       href="#"
                       class="text-indigo-200 block text-center font-medium leading-6 px-6 py-3 bg-indigo-600"
                     >
-                      Connect with <span class="font-bold">@kno-be</span>
+                      Connected with <span class="font-bold">@email</span>
                     </a>
                   </div>
                   <div class="flex justify-evenly my-5">
@@ -55,19 +55,19 @@ export default function ProfilePage() {
                       href=""
                       class="bg font-bold text-sm text-blue-800 w-full text-center py-3 hover:bg-blue-800 hover:text-white hover:shadow-lg"
                     >
-                      Facebook
+                      Cards
                     </a>
                     <a
                       href=""
                       class="bg font-bold text-sm text-blue-400 w-full text-center py-3 hover:bg-blue-400 hover:text-white hover:shadow-lg"
                     >
-                      Twitter
+                      Adress
                     </a>
                     <a
                       href=""
                       class="bg font-bold text-sm text-yellow-600 w-full text-center py-3 hover:bg-yellow-600 hover:text-white hover:shadow-lg"
                     >
-                      Instagram
+                      Support
                     </a>
                     <a
                       href=""
@@ -79,7 +79,7 @@ export default function ProfilePage() {
 
                   <div class="w-full">
                     <h3 class="font-bold text-gray-600 text-left px-4">
-                      Recent activites
+                      Last orders:
                     </h3>
                     <div class="mt-5 w-full">
                       <a
