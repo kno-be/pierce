@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Nav from '../components/navbar/navbar';
 import Image from 'next/image';
 
 import Footer from '../components/footer/footer';
@@ -12,61 +13,9 @@ export default function ProfilePage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section class="h-screen w-full px-8 text-gray-700 bg-white">
-        <div class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
-          <div class="relative flex flex-col md:flex-row">
-            <a
-              href="#_"
-              class="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0"
-            >
-              <span class="mx-auto text-xl font-black leading-none text-gray-900 select-none">
-                Pierce<span class="text-indigo-600">.</span>
-              </span>
-            </a>
-            <nav class="flex flex-wrap items-center mb-5 text-base md:mb-0 md:pl-8 md:ml-8 md:border-l md:border-gray-200">
-              <a
-                href="#_"
-                class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
-              >
-                Home
-              </a>
-              <a
-                href="#_"
-                class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
-              >
-                Features
-              </a>
-              <a
-                href="#_"
-                class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
-              >
-                Pricing
-              </a>
-              <a
-                href="#_"
-                class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900"
-              >
-                Blog
-              </a>
-            </nav>
-          </div>
-         
-
-          <div class="inline-flex items-center ml-5 space-x-6 lg:justify-end">
-            <a
-              href="#"
-              class="text-base font-medium leading-6 text-gray-600 whitespace-no-wrap transition duration-150 ease-in-out hover:text-gray-900"
-            >
-              Sign in
-            </a>
-            <a
-              href="#"
-              class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
-            >
-              Sign up
-            </a>
-          </div>
-        </div>
+      <section class="h-full w-full px-8 text-gray-700 bg-white">
+        
+        <Nav></Nav>
          
         <hr class="border-gray-600" />
         
@@ -74,7 +23,7 @@ export default function ProfilePage() {
         <body class="bg-white font-sans antialiased">
           <div class="container mx-auto my-24">
             <div>
-              <div class="bg-white relative shadow-xl w-5/6 md:w-4/6  lg:w-3/6 xl:w-2/6 mx-auto">
+              <div class="bg-gray-300 relative  rounded-md shadow-xl w-5/6 md:w-4/6  lg:w-3/6 xl:w-2/6 mx-auto">
                 <div class="flex justify-center">
                   <img
                     src="https://pantazisoft.com/img/avatar-2.jpeg"
@@ -98,7 +47,7 @@ export default function ProfilePage() {
                       href="#"
                       class="text-indigo-200 block text-center font-medium leading-6 px-6 py-3 bg-indigo-600"
                     >
-                      Connect with <span class="font-bold">@kno-be</span>
+                      Connected with <span class="font-bold">@email</span>
                     </a>
                   </div>
                   <div class="flex justify-evenly my-5">
@@ -106,19 +55,19 @@ export default function ProfilePage() {
                       href=""
                       class="bg font-bold text-sm text-blue-800 w-full text-center py-3 hover:bg-blue-800 hover:text-white hover:shadow-lg"
                     >
-                      Facebook
+                      Cards
                     </a>
                     <a
                       href=""
                       class="bg font-bold text-sm text-blue-400 w-full text-center py-3 hover:bg-blue-400 hover:text-white hover:shadow-lg"
                     >
-                      Twitter
+                      Adress
                     </a>
                     <a
                       href=""
                       class="bg font-bold text-sm text-yellow-600 w-full text-center py-3 hover:bg-yellow-600 hover:text-white hover:shadow-lg"
                     >
-                      Instagram
+                      Support
                     </a>
                     <a
                       href=""
@@ -130,7 +79,7 @@ export default function ProfilePage() {
 
                   <div class="w-full">
                     <h3 class="font-bold text-gray-600 text-left px-4">
-                      Recent activites
+                      Last orders:
                     </h3>
                     <div class="mt-5 w-full">
                       <a
