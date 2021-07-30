@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
 import Nav from '../components/navbar/navbar';
 import Footer from '../components/footer/footer';
 
@@ -26,7 +25,7 @@ export default function AboutPage() {
           </div>
           <div class="flex flex-col">
             <div class="flex mt-24 mb-12 flex-row justify-between">
-              <div class="">
+              {/* <div class="">
                 
               </div>
               <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
@@ -92,7 +91,7 @@ export default function AboutPage() {
                     />
                   </svg>
                 </a>
-              </div>
+              </div> */}
             </div>
             <hr class="border-gray-600" />
            
