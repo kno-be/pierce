@@ -1,12 +1,15 @@
 import 'tailwindcss/tailwind.css'
-import { Provider } from 'next-auth/client'
+// import { Provider } from 'next-auth/client'
 
 function MyApp({ Component, pageProps }) {
   return  (
-    <Provider session={pageProps.session}> 
-        <Component {...pageProps} />
-    </Provider>
+    <Component {...pageProps} />
   )
 }
 
 export default MyApp
+
+
+// <Provider session={pageProps.session}> 
+        
+//     </Provider>

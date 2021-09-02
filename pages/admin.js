@@ -13,18 +13,18 @@ export function updProd() {
 
 }
 
-const fetcher = url => axios.get(url).then(res => res.data)
+// const fetcher = url => axios.get(url).then(res => res.data)
 
 
 export default function AdminPage() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const { data, error } = useSWR('/api/inventory', fetcher)
+   const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  // const { data, error } = useSWR('/api/inventory', fetcher)
 
-  if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
+  // if (error) return <div>failed to load</div>
+  // if (!data) return <div>loading...</div>
 
-  console.log({errors})
-  console.log(watch("prodTitle"));
+  // console.log({errors})
+  // console.log(watch("prodTitle"));
 
 
 
@@ -46,6 +46,7 @@ export default function AdminPage() {
         <div className="w-full bg-black">
           <div className="container:md flex flex-col flex-wrap items-center space-y-1 py-4 mx-auto  md:flex-row md:max-w-xl">
             <div className="  text-white items-start">
+              
               <h1 className="text-xl">Admin</h1>
             </div>
             <div className=" text-white items-center mx-auto">
@@ -144,11 +145,11 @@ export default function AdminPage() {
               </h1>
               <ul className="px-4 mb-4">
                 
-                  {data.map((item) => (
+                  {/* {data.map((item) => (
                     <li classname="text-xl" key={item.id}>
                     <a> Product: {item.prodTitle} </a>
                     </li>
-                  ))}
+                  ))} */}
                 
               </ul>
               {/* <button onClick={() => setPageIndex(pageIndex - 1)}>Previous</button>
