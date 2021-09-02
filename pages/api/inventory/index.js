@@ -1,11 +1,22 @@
+import { Sequelize } from "sequelize";
 import connection from "../../../utils/database";
 import Product from "../../../utils/Models/Product"
 import Category from "../../../utils/Models/Category"
 
+connection
+    .authenticate()
+    .then(() => {
+      console.log("Sucessfuly connected!")
+    }).catch((error) => {
+      console.log(error)
+    })
+
 const handler = async (req, res) => {
   
   try {
-    // let { db } = await connection();
+
+    
+
     const {method} = req;
 
     switch (method) {

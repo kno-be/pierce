@@ -7,7 +7,7 @@ const Product = connection.define("products", {
             allowNull: false
         },
         price:{
-            type: Sequelize.NUMBER,
+            type: Sequelize.FLOAT,
             allowNull: false
         },
         image:{
