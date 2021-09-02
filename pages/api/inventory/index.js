@@ -1,18 +1,18 @@
-
-
+import connection from "../../../utils/database";
+import Product from "../../../utils/Models/Product"
+import Category from "../../../utils/Models/Category"
 
 const handler = async (req, res) => {
   
   try {
-    let { db } = await connectToDatabase();
+    // let { db } = await connection();
     const {method} = req;
 
     switch (method) {
-
       //LIST PRODUCTS
       case "GET":
-        let data = await db.collection('Products').find().toArray();
-        res.json(data);
+        // let data = await db.collection('Products').find().toArray();
+        res.status(200).end(`Method ${method} received sucessfuly.`);
       break; 
 
       //CREATE PRODUCT
