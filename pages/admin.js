@@ -5,13 +5,6 @@ import Footer from '../components/footer/footer';
 import axios from 'axios';
 import useSWR from 'swr';
 
-export function delProd() {
-
-}
-
-export function updProd() {
-
-}
 
 // const fetcher = url => axios.get(url).then(res => res.data)
 

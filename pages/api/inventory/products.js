@@ -27,7 +27,6 @@ const handler = async (req, res) => {
         res.status(200).end(`Method ${method} received sucessfuly.`);
         break;
 
-      //CREATE PRODUCT
       case 'POST':
         var { category, title, price, image, color, tags } = req.body;
 
@@ -73,4 +72,5 @@ const handler = async (req, res) => {
     res.status(500).json({ statusCode: 500, message: err.message });
   }
 };
+
 export default handler;
