@@ -9,9 +9,6 @@ const Category = connection.define("categories", {
     }
 })
 
-Category.hasMany(Product);
-Product.belongsTo(Category);
-
 Category.sync({force:false})
     .then( () => {})
     .catch(erro => console.log(erro))

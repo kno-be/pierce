@@ -35,20 +35,25 @@ const handler = async (req, res) => {
             color,
             tags
         } = req.body;
-        
+               
         if(title != undefined) {
-            Product.create({
-                title = title,
-                price = price,
-                image = image,
-                color = color,
-                tags  = tags
-            }).then(() => console.log("Produto criado!"))
+            const newproduct = await Product.create({
+                title: title,
+                price: price,
+                image: image,
+                color: color,
+                tags: tags
+            }).then(() => {
+              res.json({title,
+                price,
+                image,
+                color,
+                tags})
+              res.end(); 
+            })
             .catch(err => console.log(err))
-        }else{
-            console.log("ERROR CREATING PRODUCT")
-        }   
-    break;
+          }
+          break;
 
       default:
         res.status(405).end(`Method ${method} not allowed`);

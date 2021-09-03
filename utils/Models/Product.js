@@ -1,5 +1,6 @@
 import Sequelize from "sequelize";
 import connection from "../database";
+import Category from "./Category";
 
 const Product = connection.define("products", {
         title:{
@@ -23,6 +24,10 @@ const Product = connection.define("products", {
             allowNull: false
         }
 })
+
+
+Product.belongsTo(Category);
+Category.hasMany(Product);
 
 Product.sync({force:false})
     .then(() => {})
