@@ -30,7 +30,7 @@ export default function AdminPage() {
 
   const onSubmit = product => {
     axios
-    .post("http://localhost:3000/api/inventory", product)
+    .post("http://localhost:3000/api/inventory/products", product)
     .then(res => console.log(res))
     .catch(err => console.log(err));
     }
