@@ -17,13 +17,9 @@ const handler = async (req, res) => {
     const { method } = req;
 
     switch (method) {
-      //LIST PRODUCTS
       case 'GET':
-        // let data = await db.collection('Products').find().toArray();
         res.status(200).end(`Method ${method} received sucessfuly.`);
         break;
-
-      //CREATE PRODUCT
 
       case 'POST':
         var { name, slug } = req.body;
