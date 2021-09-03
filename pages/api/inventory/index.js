@@ -14,9 +14,6 @@ connection
 const handler = async (req, res) => {
   
   try {
-
-    
-
     const {method} = req;
 
     switch (method) {
@@ -28,21 +25,7 @@ const handler = async (req, res) => {
 
       //CREATE PRODUCT
       case "POST":
-        var {
-          prodTitle,
-          prodPrice,
-          prodImg,
-          prodColor,
-          prodTags 
-                } = req.body;
-         let create = await db.collection('Products').insertOne({
-         prodTitle,
-         prodPrice,
-         prodImg,
-         prodColor,
-         prodTags
-        });
-        res.json(create);
+        
       break;
 
       default:
